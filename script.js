@@ -19,7 +19,7 @@ const calcular = (op) => {
     case "-": res = a - b; break;
     case "*": res = a * b; break;
     case "/": res = b !== 0 ? a / b : "∞"; break;
-    case "%": res = a % b; break;
+    case "%": res = a % b; break; // módulo
     case "pow": res = Math.pow(a, b); break;
     default: res = "Error";
   }
@@ -27,7 +27,7 @@ const calcular = (op) => {
   resultado.textContent = res;
 };
 
-// Asignar eventos a los botones
+// Asignar eventos con addEventListener
 botones.forEach(boton => {
   boton.addEventListener("click", () => {
     const operacion = boton.getAttribute("data-op");
